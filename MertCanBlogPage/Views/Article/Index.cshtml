@@ -1,0 +1,62 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@model IPagedList<MertCanBlogPage.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="list-of-posts">
+    <table class="table" id="example">
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Date
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title, new { @class = "post" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content, new { @class = "post" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date, new { @class = "post" })
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author, new { @class = "post" })
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ArticleId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ArticleId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ArticleId })
+                </td>
+            </tr>
+        }
+
+
+    </table>
+    <div class="pagedList">
+        @Html.PagedListPager(Model, sayfa => Url.Action("Index", new { sayfa }), PagedListRenderOptions.ClassicPlusFirstAndLast)
+    </div>
+
+</div>
+<script src="~/Content/jquery.js"></script>
+<script src="~/Content/custom.js"></script>
+<script src="~/Content/paginate.js"></script>
