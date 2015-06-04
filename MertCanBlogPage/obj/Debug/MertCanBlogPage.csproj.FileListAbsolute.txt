@@ -58,4 +58,3 @@ C:\Users\Mert Can\Documents\Visual Studio 2013\Projects\MertCanBlogPage\MertCanB
 C:\Users\Mert Can\Documents\Visual Studio 2013\Projects\MertCanBlogPage\MertCanBlogPage\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Mert Can\Documents\Visual Studio 2013\Projects\MertCanBlogPage\MertCanBlogPage\obj\Debug\MertCanBlogPage.dll
 C:\Users\Mert Can\Documents\Visual Studio 2013\Projects\MertCanBlogPage\MertCanBlogPage\obj\Debug\MertCanBlogPage.pdb
-C:\Users\Mert Can\Documents\Visual Studio 2013\Projects\MertCanBlogPage\MertCanBlogPage\obj\Debug\MertCanBlogPage.csprojResolveAssemblyReference.cache
